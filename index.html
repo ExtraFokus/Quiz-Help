@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanska glosser 3</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600&display=swap');
+
+:root{
+  --ink:#1B3A4B;
+  --ink-deep:#122732;
+  --ivory:#FBF4E4;
+  --ochre:#E4A72C;
+  --brick:#C4432E;
+  --leaf:#4C8C6B;
+  --text:#241f18;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:var(--ink);
+  background-image:
+    linear-gradient(135deg, rgba(228,167,44,0.08) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(228,167,44,0.08) 25%, transparent 25%);
+  background-size:56px 56px;
+  font-family:'Work Sans', sans-serif;
+  color:var(--text);
+  display:flex;
+  justify-content:center;
+  padding:32px 16px 60px;
+  line-height:1.5;
+}
+
+.wrap{ width:100%; max-width:680px; }
+
+.tilebar{
+  height:10px;
+  border-radius:6px 6px 0 0;
+  background:repeating-linear-gradient(90deg,
+    var(--ochre) 0 25%, var(--brick) 25% 50%, var(--leaf) 50% 75%, var(--ink) 75% 100%);
+}
+
+.card{
+  background:var(--ivory);
+  border-radius:0 0 14px 14px;
+  padding:34px 30px 32px;
+  box-shadow:0 24px 60px rgba(0,0,0,0.35);
+}
+
+h1{
+  font-family:'Fraunces', serif; font-weight:700; font-size:1.95rem;
+  margin:0 0 6px; color:var(--ink-deep); letter-spacing:-0.01em;
+}
+h2{ font-family:'Fraunces', serif; font-weight:700; color:var(--ink-deep); margin:0 0 6px; font-size:1.5rem; }
+h3{ font-family:'Fraunces', serif; font-weight:600; color:var(--ink-deep); margin:22px 0 10px; font-size:1.12rem; }
+
+.sub{ margin:0 0 24px; color:#4a4436; font-size:0.98rem; max-width:50ch; }
+
+.menu-top-actions{ display:flex; gap:10px; margin-bottom:18px; flex-wrap:wrap; }
+.smart-actions{ display:flex; gap:10px; margin-bottom:24px; flex-wrap:wrap; }
+
+.mode-block{
+  border:2px solid var(--ink); border-radius:12px; padding:18px 20px; margin-bottom:14px;
+}
+.mode-title{
+  font-family:'Fraunces', serif; font-weight:600; font-size:1.22rem; color:var(--ink-deep);
+  display:block; margin-bottom:3px;
+}
+.mode-desc{ font-size:0.92rem; color:#4a4436; margin-bottom:14px; }
+.mode-buttons{ display:flex; gap:10px; flex-wrap:wrap; }
+
+.subrow{
+  display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+  padding:10px 0; border-top:1px solid #e2d9c2;
+}
+.subrow:first-of-type{ border-top:none; padding-top:4px; }
+.subrow-label{ font-weight:600; color:var(--ink-deep); font-size:0.95rem; }
+.subrow-desc{ font-size:0.82rem; color:#6b6353; display:block; }
+.subrow-buttons{ display:flex; gap:8px; flex-wrap:wrap; }
+
+.btn{
+  border:none; border-radius:9px; padding:12px 20px;
+  font-family:'Work Sans', sans-serif; font-weight:600; font-size:0.94rem; cursor:pointer;
+}
+.btn-primary{ background:var(--ink); color:var(--ivory); }
+.btn-primary:hover{ background:var(--ink-deep); }
+.btn-ghost{ background:transparent; border:2px solid var(--ink); color:var(--ink); }
+.btn-ghost:hover{ background:var(--ink); color:var(--ivory); }
+.btn-small{ padding:8px 14px; font-size:0.86rem; }
+.btn-danger{ background:var(--brick); color:#fff; }
+.btn-danger:hover{ background:#a3392a; }
+.btn:disabled{ opacity:0.4; cursor:default; }
+
+.quiz-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:6px; }
+.head-actions{ display:flex; gap:8px; flex-shrink:0; }
+.progress{ font-size:0.88rem; color:#4a4436; }
+.progress b{ color:var(--ink-deep); }
+.tally{ font-size:0.86rem; color:#6b6353; margin-top:2px; }
+
+.timer-badge{
+  display:inline-block; margin:10px 0 0; font-weight:700; color:var(--brick);
+  background:rgba(196,67,46,0.1); border-radius:7px; padding:5px 12px; font-size:0.9rem;
+}
+
+.struggle-line{
+  font-size:0.85rem; color:var(--brick); margin:12px 0 16px;
+  background:rgba(196,67,46,0.09); border-radius:7px; padding:9px 12px;
+}
+
+.q-swedish{
+  font-family:'Fraunces', serif; font-weight:600; font-size:1.55rem; color:var(--ink-deep);
+  margin:16px 0 20px; line-height:1.3;
+}
+
+.options{ display:flex; flex-direction:column; gap:10px; margin-bottom:6px; }
+.opt-btn{
+  text-align:left; border:2px solid #d8cfb8; background:#fff; border-radius:9px;
+  padding:14px 16px; font-size:1.04rem; font-family:'Work Sans', sans-serif;
+  cursor:pointer; color:var(--text); transition:border-color 0.12s ease, background 0.12s ease;
+}
+.opt-btn:hover{ border-color:var(--ink); }
+.opt-btn.correct{ background:var(--leaf); border-color:var(--leaf); color:#fff; }
+.opt-btn.wrong{ background:var(--brick); border-color:var(--brick); color:#fff; }
+.opt-btn.disabled{ pointer-events:none; }
+.opt-btn.dim{ opacity:0.55; }
+
+.hangman-display{
+  font-family:'Fraunces', serif; font-size:1.65rem; letter-spacing:0.1em;
+  color:var(--ink-deep); margin-bottom:16px; word-break:break-word; line-height:1.5;
+}
+.hangman-display .gap{ border-bottom:3px solid var(--ink); padding:0 2px; }
+.hangman-display .space{ display:inline-block; width:14px; }
+
+.listen-count{ font-size:0.88rem; color:#6b6353; align-self:center; }
+
+input[type=text]{
+  width:100%; padding:14px 16px; font-size:1.08rem; border:2px solid var(--ink);
+  border-radius:9px; font-family:'Work Sans', sans-serif; background:#fff; color:var(--text);
+  margin-bottom:4px;
+}
+input[type=text]:focus{ outline:2px solid var(--ochre); outline-offset:1px; }
+
+.row{ display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; align-items:center; }
+
+.feedback{ margin-top:16px; font-weight:600; font-size:1.02rem; }
+.feedback.ok{ color:var(--leaf); }
+.feedback.bad{ color:var(--brick); }
+
+.score-big{ font-family:'Fraunces', serif; font-size:2.5rem; font-weight:700; color:var(--ink-deep); margin:2px 0 20px; }
+.review-list{ list-style:none; padding:0; margin:0 0 22px; display:flex; flex-direction:column; gap:8px; }
+.review-item{ display:flex; justify-content:space-between; gap:12px; padding:11px 14px; border-radius:8px; font-size:0.94rem; }
+.review-item.right{ background:rgba(76,140,107,0.14); }
+.review-item.miss{ background:rgba(196,67,46,0.14); }
+.review-sv{ color:#4a4436; }
+.review-es{ font-weight:600; color:var(--ink-deep); }
+.tag{ font-size:0.76rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; align-self:center; }
+.tag.right{ color:var(--leaf); }
+.tag.miss{ color:var(--brick); }
+
+.pick-list{ display:flex; flex-direction:column; gap:6px; max-height:420px; overflow-y:auto; margin:16px 0; padding-right:4px; }
+.pick-item{
+  display:flex; align-items:center; gap:10px; padding:11px 12px; border:1.5px solid #e2d9c2;
+  border-radius:8px; font-size:0.96rem; cursor:pointer;
+}
+.pick-item input{ width:18px; height:18px; accent-color:var(--ink); cursor:pointer; }
+.pick-item .pi-sv{ color:var(--ink-deep); font-weight:600; }
+.pick-item .pi-es{ color:#6b6353; }
+
+.setting-group{ margin-bottom:26px; }
+.setting-label{ font-family:'Fraunces', serif; font-weight:600; color:var(--ink-deep); margin-bottom:4px; font-size:1.06rem; }
+.setting-desc{ font-size:0.85rem; color:#6b6353; margin-bottom:10px; }
+.radio-grid{ display:flex; flex-wrap:wrap; gap:8px; }
+.radio-opt{
+  border:2px solid #d8cfb8; border-radius:8px; padding:9px 15px; font-size:0.9rem;
+  cursor:pointer; display:flex; align-items:center; gap:6px;
+}
+.radio-opt.active{ border-color:var(--ink); background:var(--ink); color:var(--ivory); }
+.radio-opt input{ display:none; }
+
+.stat-overview{
+  background:var(--ink); color:var(--ivory); border-radius:12px; padding:20px 22px; margin-bottom:22px;
+}
+.stat-overview .score-big{ color:var(--ochre); margin:2px 0 4px; }
+.stat-overview .stat-sub{ font-size:0.87rem; color:#cfd9dd; }
+.stat-insight{ font-size:0.85rem; color:#e8dcc3; margin-top:10px; }
+.stat-table{ display:flex; flex-direction:column; gap:6px; }
+.stat-row{
+  display:flex; justify-content:space-between; align-items:center; gap:10px;
+  padding:11px 12px; border-radius:8px; background:#fff; border:1.5px solid #e2d9c2; font-size:0.92rem;
+}
+.stat-row .sr-word{ color:var(--ink-deep); font-weight:600; }
+.stat-row .sr-sub{ color:#8a8168; font-size:0.81rem; }
+.stat-pct{ font-weight:700; font-family:'Fraunces', serif; font-size:1.08rem; }
+.stat-pct.low{ color:var(--brick); }
+.stat-pct.mid{ color:var(--ochre); }
+.stat-pct.high{ color:var(--leaf); }
+.empty-note{ color:#4a4436; font-size:0.95rem; }
+
+.modal-overlay{
+  position:fixed; inset:0; background:rgba(18,39,50,0.6);
+  display:flex; align-items:center; justify-content:center; padding:20px; z-index:50;
+}
+.modal-box{
+  background:var(--ivory); border-radius:12px; padding:26px 24px; max-width:400px; width:100%;
+  box-shadow:0 20px 50px rgba(0,0,0,0.4);
+}
+.modal-box p{ margin:0 0 18px; color:var(--text); font-size:1rem; line-height:1.45; }
+
+.back-link{
+  display:inline-block; margin-top:2px; color:var(--ink-deep); font-size:0.87rem;
+  cursor:pointer; text-decoration:underline; background:none; border:none; padding:0; font-family:inherit;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tilebar"></div>
+  <div class="card" id="app">Laddar…</div>
+</div>
+
+<script>
+// Ordlista: svenska (fråga) -> spanska (svar)
+const WORDS = [
+  {id:0, sv:"Vi pratar", es:"Hablamos"},
+  {id:1, sv:"Mjölk", es:"Leche"},
+  {id:2, sv:"Jag pratar", es:"Hablo"},
+  {id:3, sv:"Engelska", es:"Inglés"},
+  {id:4, sv:"Flickan/Tjejen", es:"La chica"},
+  {id:5, sv:"Vi spelar", es:"Jugamos"},
+  {id:6, sv:"Till/För att", es:"Para"},
+  {id:7, sv:"Du pratar", es:"Hablas"},
+  {id:8, sv:"Att spela", es:"Jugar"},
+  {id:9, sv:"Hunden", es:"El perro"},
+  {id:10, sv:"Också", es:"También"},
+  {id:11, sv:"Jag är", es:"Soy"},
+  {id:12, sv:"Svensk", es:"Sueco"},
+  {id:13, sv:"Sverige", es:"Suecia"},
+  {id:14, sv:"Varifrån kommer du?", es:"¿De dónde eres?"},
+];
+
+const STORAGE_STATS_KEY = 'glosor3-stats';
+const STORAGE_SETTINGS_KEY = 'glosor3-settings';
+
+const app = document.getElementById('app');
+let state = {};
+let STATS = {};
+let SETTINGS = defaultSettings();
+
+function defaultSettings(){
+  return {
+    hintCooldown: 5,
+    maxHints: 5,
+    listenLimit: 5,
+    voiceRate: 'normal',
+    strictAccents: false,
+    questionsPerRound: 'all',
+    requeueWrong: false,
+    timeLimit: 0,
+    showStruggleTip: true,
+    soundFeedback: true,
+    rememberLastMode: false,
+    lastMode: null
+  };
+}
+
+// ---------- Persistent storage (sparas i webbläsaren) ----------
+async function loadStats(){
+  try{
+    const res = await window.storage.get(STORAGE_STATS_KEY, false);
+    if(res && res.value) return JSON.parse(res.value);
+  }catch(e){}
+  return {};
+}
+async function saveStats(){
+  try{ await window.storage.set(STORAGE_STATS_KEY, JSON.stringify(STATS), false); }
+  catch(e){ console.error('Kunde inte spara statistik', e); }
+}
+async function loadSettings(){
+  const d = defaultSettings();
+  try{
+    const res = await window.storage.get(STORAGE_SETTINGS_KEY, false);
+    if(res && res.value) return {...d, ...JSON.parse(res.value)};
+  }catch(e){}
+  return d;
+}
+async function saveSettings(){
+  try{ await window.storage.set(STORAGE_SETTINGS_KEY, JSON.stringify(SETTINGS), false); }
+  catch(e){ console.error('Kunde inte spara inställningar', e); }
+}
+
+function recordAnswer(id, correct, timeMs){
+  if(!STATS[id]) STATS[id] = {attempts:0, correct:0, totalTimeMs:0, timedAttempts:0};
+  STATS[id].attempts++;
+  if(correct) STATS[id].correct++;
+  if(typeof timeMs === 'number' && timeMs > 0 && timeMs < 120000){
+    STATS[id].totalTimeMs += timeMs;
+    STATS[id].timedAttempts++;
+  }
+  saveStats();
+}
+
+function getStruggleWords(excludeIds, limit){
+  return Object.entries(STATS)
+    .filter(([id,s]) => s.attempts > 0 && s.correct / s.attempts < 1)
+    .filter(([id]) => !excludeIds.includes(Number(id)))
+    .map(([id,s]) => ({id:Number(id), acc: s.correct/s.attempts, attempts:s.attempts}))
+    .sort((a,b) => a.acc - b.acc || b.attempts - a.attempts)
+    .slice(0, limit)
+    .map(e => WORDS.find(w=>w.id===e.id).sv);
+}
+
+function getWeakWords(){
+  const weakIds = Object.entries(STATS)
+    .filter(([id,s]) => s.attempts > 0 && s.correct/s.attempts < 0.7)
+    .map(([id,s]) => ({id:Number(id), acc:s.correct/s.attempts}))
+    .sort((a,b) => a.acc - b.acc)
+    .map(e => e.id);
+  return WORDS.filter(w => weakIds.includes(w.id));
+}
+
+// ---------- Helpers ----------
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+
+function dedupeKey(str){
+  return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+    .replace(/[¿?¡!]/g,"").trim().replace(/\s+/g," ");
+}
+
+function normalizeAnswer(str){
+  let s = str.toLowerCase().trim().replace(/[¿?¡!]/g,"").replace(/\s+/g," ");
+  if(!SETTINGS.strictAccents){
+    s = s.normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+  }
+  return s;
+}
+
+function diffLabel(d){
+  return d === 'easy' ? 'Lätt' : d === 'medium' ? 'Medium' : 'Svår';
+}
+
+function showConfirm(message, onYes){
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = `
+    <div class="modal-box">
+      <p>${message}</p>
+      <div class="row">
+        <button class="btn btn-danger" id="yesBtn">Ja</button>
+        <button class="btn btn-ghost" id="noBtn">Nej, fortsätt</button>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+  document.getElementById('yesBtn').onclick = () => { document.body.removeChild(overlay); onYes(); };
+  document.getElementById('noBtn').onclick = () => { document.body.removeChild(overlay); };
+}
+
+function speak(text){
+  try{
+    if(!('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'es-ES';
+    u.rate = SETTINGS.voiceRate === 'slow' ? 0.75 : (SETTINGS.voiceRate === 'fast' ? 1.3 : 1);
+    window.speechSynthesis.speak(u);
+  }catch(e){}
+}
+
+function playBeep(correct){
+  if(!SETTINGS.soundFeedback) return;
+  try{
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.frequency.value = correct ? 880 : 220;
+    o.type = 'sine';
+    g.gain.value = 0.08;
+    o.connect(g); g.connect(ctx.destination);
+    o.start();
+    setTimeout(() => { o.stop(); ctx.close(); }, 180);
+  }catch(e){}
+}
+
+function clearAnyTimers(){
+  if(state.cooldownInterval){ clearInterval(state.cooldownInterval); state.cooldownInterval = null; }
+  if(state.timerInterval){ clearInterval(state.timerInterval); state.timerInterval = null; }
+}
+
+// ---------- Startmeny ----------
+function renderMenu(){
+  clearAnyTimers();
+  const lm = SETTINGS.lastMode;
+  const quickStart = (SETTINGS.rememberLastMode && lm) ? `
+    <div class="menu-top-actions">
+      <button class="btn btn-primary" id="quickBtn">Fortsätt: ${lm.mode==='click'?'Klicka-quiz':lm.mode==='type'?'Skriv-quiz':lm.mode==='mixed'?'Blandat quiz':'Lyssna-quiz · '+diffLabel(lm.difficulty)}</button>
+    </div>` : '';
+
+  app.innerHTML = `
+    <h1>Spanska glosser 3</h1>
+    <p class="sub">15 ord och fraser från boken (v.37). Välj hur du vill öva.</p>
+    ${quickStart}
+    <div class="menu-top-actions">
+      <button class="btn btn-ghost btn-small" id="statsBtn">Statistik</button>
+      <button class="btn btn-ghost btn-small" id="settingsBtn">Inställningar</button>
+    </div>
+    <div class="smart-actions">
+      <button class="btn btn-ghost btn-small" id="weakBtn">🎯 Träna på dina svåra ord</button>
+      <button class="btn btn-ghost btn-small" id="mixedBtn">🔀 Blandat quiz</button>
+    </div>
+
+    <div class="mode-block">
+      <span class="mode-title">Klicka-quiz</span>
+      <p class="mode-desc">4 alternativ, ett rätt — de andra är felstavade eller fel ord.</p>
+      <div class="mode-buttons">
+        <button class="btn btn-primary" id="clickNormal">Normal (alla 15)</button>
+        <button class="btn btn-ghost" id="clickEgen">Egen</button>
+      </div>
+    </div>
+
+    <div class="mode-block">
+      <span class="mode-title">Skriv-quiz</span>
+      <p class="mode-desc">Skriv svaret själv. Kör fast? Ta en ledtråd så visas nästa bokstav.</p>
+      <div class="mode-buttons">
+        <button class="btn btn-primary" id="typeNormal">Normal (alla 15)</button>
+        <button class="btn btn-ghost" id="typeEgen">Egen</button>
+      </div>
+    </div>
+
+    <div class="mode-block">
+      <span class="mode-title">Lyssna-quiz</span>
+      <p class="mode-desc">Tryck på play-knappen så läses ordet upp på spanska.</p>
+      <div class="subrow">
+        <div><span class="subrow-label">Lätt</span><span class="subrow-desc">Svenska ordet visas + du klickar rätt spanskt alternativ.</span></div>
+        <div class="subrow-buttons">
+          <button class="btn btn-primary btn-small" id="lstEasyN">Normal</button>
+          <button class="btn btn-ghost btn-small" id="lstEasyE">Egen</button>
+        </div>
+      </div>
+      <div class="subrow">
+        <div><span class="subrow-label">Medium</span><span class="subrow-desc">Svenska ordet visas + du skriver det spanska svaret.</span></div>
+        <div class="subrow-buttons">
+          <button class="btn btn-primary btn-small" id="lstMedN">Normal</button>
+          <button class="btn btn-ghost btn-small" id="lstMedE">Egen</button>
+        </div>
+      </div>
+      <div class="subrow">
+        <div><span class="subrow-label">Svår</span><span class="subrow-desc">Inget svenskt ord visas — bara ljudet. Du skriver vad du hör.</span></div>
+        <div class="subrow-buttons">
+          <button class="btn btn-primary btn-small" id="lstHardN">Normal</button>
+          <button class="btn btn-ghost btn-small" id="lstHardE">Egen</button>
+        </div>
+      </div>
+    </div>
+  `;
+  document.getElementById('statsBtn').onclick = renderStats;
+  document.getElementById('settingsBtn').onclick = renderSettings;
+  document.getElementById('weakBtn').onclick = renderWeakWordsScreen;
+  document.getElementById('mixedBtn').onclick = () => startQuiz('mixed', WORDS);
+  document.getElementById('clickNormal').onclick = () => startQuiz('click', WORDS);
+  document.getElementById('typeNormal').onclick = () => startQuiz('type', WORDS);
+  document.getElementById('clickEgen').onclick = () => renderCustomPicker('click');
+  document.getElementById('typeEgen').onclick = () => renderCustomPicker('type');
+  document.getElementById('lstEasyN').onclick = () => startQuiz('listen', WORDS, 'easy');
+  document.getElementById('lstMedN').onclick = () => startQuiz('listen', WORDS, 'medium');
+  document.getElementById('lstHardN').onclick = () => startQuiz('listen', WORDS, 'hard');
+  document.getElementById('lstEasyE').onclick = () => renderCustomPicker('listen', 'easy');
+  document.getElementById('lstMedE').onclick = () => renderCustomPicker('listen', 'medium');
+  document.getElementById('lstHardE').onclick = () => renderCustomPicker('listen', 'hard');
+  if(quickStart) document.getElementById('quickBtn').onclick = () => startQuiz(lm.mode, WORDS, lm.difficulty);
+}
+
+// ---------- Svåra ord ----------
+function renderWeakWordsScreen(){
+  clearAnyTimers();
+  const weakWords = getWeakWords();
+  if(weakWords.length === 0){
+    app.innerHTML = `
+      <h2>Dina svåra ord</h2>
+      <p class="sub">Du har inga svaga ord ännu — kör några rundor först, så dyker de upp här automatiskt.</p>
+      <button class="back-link" id="menuBtn">Till startmenyn</button>
+    `;
+    document.getElementById('menuBtn').onclick = renderMenu;
+    return;
+  }
+  app.innerHTML = `
+    <h2>Dina svåra ord</h2>
+    <p class="sub">${weakWords.length} ord där du haft rätt mindre än 70% av gångerna. Välj hur du vill träna på just dem.</p>
+    <ul class="review-list">
+      ${weakWords.map(w=>`<li class="review-item miss"><div><div class="review-sv">${w.sv}</div><div class="review-es">${w.es}</div></div></li>`).join('')}
+    </ul>
+    <div class="row">
+      <button class="btn btn-primary" id="wkClick">Klicka-quiz</button>
+      <button class="btn btn-primary" id="wkType">Skriv-quiz</button>
+      <button class="btn btn-primary" id="wkListen">Lyssna (lätt)</button>
+    </div>
+    <div class="row"><button class="back-link" id="menuBtn">Till startmenyn</button></div>
+  `;
+  document.getElementById('wkClick').onclick = () => startQuiz('click', weakWords);
+  document.getElementById('wkType').onclick = () => startQuiz('type', weakWords);
+  document.getElementById('wkListen').onclick = () => startQuiz('listen', weakWords, 'easy');
+  document.getElementById('menuBtn').onclick = renderMenu;
+}
+
+// ---------- Egen (custom picker) ----------
+function renderCustomPicker(kind, difficulty){
+  clearAnyTimers();
+  const titleExtra = kind === 'listen' ? ` — Lyssna (${diffLabel(difficulty)})` : (kind==='click' ? ' — Klicka-quiz' : ' — Skriv-quiz');
+  app.innerHTML = `
+    <h2>Egen${titleExtra}</h2>
+    <p class="sub">Bocka ur de ord du inte vill öva på just nu.</p>
+    <div class="row" style="margin-top:0;">
+      <button class="btn btn-ghost btn-small" id="allBtn">Markera alla</button>
+      <button class="btn btn-ghost btn-small" id="noneBtn">Avmarkera alla</button>
+    </div>
+    <div class="pick-list" id="pickList"></div>
+    <div class="row">
+      <button class="btn btn-primary" id="startCustom">Starta</button>
+      <button class="back-link" id="backMenu">Till startmenyn</button>
+    </div>
+    <div class="feedback bad" id="pickWarn"></div>
+  `;
+  const list = document.getElementById('pickList');
+  WORDS.forEach(w => {
+    const label = document.createElement('label');
+    label.className = 'pick-item';
+    label.innerHTML = `
+      <input type="checkbox" checked data-id="${w.id}">
+      <span><span class="pi-sv">${w.sv}</span> — <span class="pi-es">${w.es}</span></span>
+    `;
+    list.appendChild(label);
+  });
+  document.getElementById('allBtn').onclick = () => list.querySelectorAll('input').forEach(c => c.checked = true);
+  document.getElementById('noneBtn').onclick = () => list.querySelectorAll('input').forEach(c => c.checked = false);
+  document.getElementById('backMenu').onclick = renderMenu;
+  document.getElementById('startCustom').onclick = () => {
+    const ids = Array.from(list.querySelectorAll('input:checked')).map(c => Number(c.dataset.id));
+    if(ids.length === 0){
+      document.getElementById('pickWarn').textContent = 'Välj minst en fråga innan du startar.';
+      return;
+    }
+    const selected = WORDS.filter(w => ids.includes(w.id));
+    startQuiz(kind, selected, difficulty);
+  };
+}
+
+// ---------- Distraktorer för klicka-läge ----------
+function typoVariant(word, seedOffset){
+  const letters = "abcdefghijklmnopqrstuvwxyzáéíóúñ";
+  let chars = word.split("");
+  const editableIdx = chars.map((c,i)=>({c,i}))
+    .filter(o => /[a-zA-ZáéíóúñÁÉÍÓÚÑ]/.test(o.c)).map(o=>o.i);
+  if(editableIdx.length === 0) return word + "x";
+  const mode = (editableIdx.length + seedOffset) % 3;
+  if(mode === 0 && editableIdx.length >= 2){
+    const pick = Math.floor(Math.random()*(editableIdx.length-1));
+    const i1 = editableIdx[pick], i2 = editableIdx[pick+1];
+    [chars[i1], chars[i2]] = [chars[i2], chars[i1]];
+  } else if(mode === 1){
+    const i = editableIdx[Math.floor(Math.random()*editableIdx.length)];
+    chars.splice(i,1);
+  } else {
+    const i = editableIdx[Math.floor(Math.random()*editableIdx.length)];
+    let repl;
+    do{ repl = letters[Math.floor(Math.random()*letters.length)]; }
+    while(repl === chars[i].toLowerCase());
+    chars[i] = chars[i] === chars[i].toUpperCase() ? repl.toUpperCase() : repl;
+  }
+  return chars.join("");
+}
+
+function buildOptions(correct){
+  const seen = new Set([dedupeKey(correct)]);
+  const options = [correct];
+  let attempt = 0, offset = 0;
+  while(options.length < 4 && attempt < 40){
+    attempt++;
+    const variant = typoVariant(correct, offset);
+    offset++;
+    const key = dedupeKey(variant);
+    if(!seen.has(key) && variant !== correct){ seen.add(key); options.push(variant); }
+  }
+  while(options.length < 4){ options.push(correct + "a".repeat(options.length)); }
+  return shuffle(options);
+}
+
+function displayHangman(answer, revealedSet){
+  return answer.split("").map((ch,idx) => {
+    if(ch === " ") return `<span class="space"></span>`;
+    if(/[¿?¡!]/.test(ch)) return `<span>${ch}</span>`;
+    if(revealedSet.has(idx)) return `<span class="gap">${ch}</span>`;
+    return `<span class="gap">&nbsp;</span>`;
+  }).join("");
+}
+
+// ---------- Quiz-motor ----------
+function startQuiz(mode, list, difficulty){
+  let shuffled = shuffle(list);
+  if(mode === 'mixed'){
+    shuffled = shuffled.map(w => {
+      const kinds = ['click','type','listen'];
+      const kind = kinds[Math.floor(Math.random()*kinds.length)];
+      let diff = null;
+      if(kind === 'listen'){
+        const diffs = ['easy','medium','hard'];
+        diff = diffs[Math.floor(Math.random()*diffs.length)];
+      }
+      return {...w, kind, difficulty: diff};
+    });
+  }
+  const cap = SETTINGS.questionsPerRound === 'all' ? shuffled.length : Math.min(SETTINGS.questionsPerRound, shuffled.length);
+  const order = shuffled.slice(0, cap);
+  state = {
+    mode, difficulty, list, order, i:0, results:[],
+    cooldownInterval:null, timerInterval:null, requeuedIds:new Set(), answered:false
+  };
+  SETTINGS.lastMode = { mode, difficulty };
+  saveSettings();
+  renderQuestion();
+}
+
+function renderQuestion(){
+  const total = state.order.length;
+  if(state.i >= total){ return renderResults(); }
+  const item = state.order[state.i];
+  let kind, difficulty;
+  if(state.mode === 'mixed'){ kind = item.kind; difficulty = item.difficulty; }
+  else if(state.mode === 'listen'){ kind = 'listen'; difficulty = state.difficulty; }
+  else { kind = state.mode; difficulty = null; }
+  renderQuestionUI(item, kind, difficulty);
+}
+
+function bindCancel(){
+  document.getElementById('cancelBtn').onclick = () => {
+    showConfirm('Är du säker på att du vill avbryta quizet? Redan besvarade frågor sparas i statistiken.', () => {
+      clearAnyTimers();
+      renderMenu();
+    });
+  };
+}
+
+function bindSkip(item){
+  document.getElementById('skipBtn').onclick = () => {
+    showConfirm('Om du hoppar över får du inget poäng för den här frågan. Vill du hoppa över?', () => {
+      if(state.answered) return;
+      state.answered = true;
+      clearAnyTimers();
+      finalizeAnswer(item, false, true);
+      state.i++;
+      renderQuestion();
+    });
+  };
+}
+
+function attachTimer(item){
+  if(!SETTINGS.timeLimit) return;
+  const slot = document.getElementById('timerSlot');
+  let remaining = SETTINGS.timeLimit;
+  slot.innerHTML = `<div class="timer-badge">⏱ ${remaining}s kvar</div>`;
+  const badge = slot.querySelector('.timer-badge');
+  state.timerInterval = setInterval(() => {
+    remaining--;
+    if(remaining <= 0){
+      clearInterval(state.timerInterval); state.timerInterval = null;
+      if(!state.answered){
+        state.answered = true;
+        document.querySelectorAll('.opt-btn, #submitBtn, #hintBtn, #playBtn').forEach(b => b.disabled = true);
+        finalizeAnswer(item, false, false);
+        const fb = document.getElementById('fb');
+        fb.textContent = `Tiden tog slut. Rätt svar är "${item.es}".`;
+        fb.className = 'feedback bad';
+        setTimeout(() => { state.i++; renderQuestion(); }, 1600);
+      }
+      return;
+    }
+    badge.textContent = `⏱ ${remaining}s kvar`;
+  }, 1000);
+}
+
+function finalizeAnswer(item, isCorrect, skipped){
+  const timeMs = Date.now() - (state.qStart || Date.now());
+  state.results.push({sv:item.sv, es:item.es, correct:isCorrect, skipped});
+  recordAnswer(item.id, isCorrect, timeMs);
+  playBeep(isCorrect);
+  if(!isCorrect && !skipped && SETTINGS.requeueWrong && !state.requeuedIds.has(item.id)){
+    state.requeuedIds.add(item.id);
+    state.order.push(item);
+  }
+}
+
+function answerGiven(item, isCorrect){
+  if(state.answered) return;
+  state.answered = true;
+  clearAnyTimers();
+  finalizeAnswer(item, isCorrect, false);
+  const fb = document.getElementById('fb');
+  fb.textContent = isCorrect ? 'Rätt!' : `Fel. Rätt svar är "${item.es}".`;
+  fb.className = 'feedback ' + (isCorrect ? 'ok' : 'bad');
+  setTimeout(() => { state.i++; renderQuestion(); }, isCorrect ? 700 : 1500);
+}
+
+function renderQuestionUI(item, kind, difficulty){
+  clearAnyTimers();
+  state.answered = false;
+  state.qStart = Date.now();
+  const total = state.order.length;
+
+  let modeLabel;
+  if(kind === 'click') modeLabel = 'Klicka-quiz';
+  else if(kind === 'type') modeLabel = 'Skriv-quiz';
+  else modeLabel = `Lyssna-quiz · ${diffLabel(difficulty)}`;
+  if(state.mode === 'mixed') modeLabel = `Blandat quiz · ${modeLabel}`;
+
+  const struggle = SETTINGS.showStruggleTip ? getStruggleWords([item.id], 2) : [];
+
+  let headerHtml = `
+    <div class="quiz-head">
+      <div>
+        <div class="progress"><span>${modeLabel}</span> · <b>${state.i+1}</b> / ${total}</div>
+        <div class="tally">Du har gjort ${state.i}/${total} hittills</div>
+      </div>
+      <div class="head-actions">
+        <button class="btn btn-ghost btn-small" id="skipBtn">Hoppa över</button>
+        <button class="btn btn-ghost btn-small" id="cancelBtn">Avbryt</button>
+      </div>
+    </div>
+    <div id="timerSlot"></div>
+    ${struggle.length ? `<div class="struggle-line">Du brukar ha svårast med: ${struggle.join(', ')}</div>` : ''}
+  `;
+
+  let bodyHtml = '';
+  if(kind === 'click'){
+    bodyHtml = `<p class="q-swedish">${item.sv}</p><div class="options" id="opts"></div>`;
+  } else if(kind === 'type'){
+    bodyHtml = `
+      <p class="q-swedish">${item.sv}</p>
+      <div class="hangman-display" id="hangman"></div>
+      <input type="text" id="answerInput" placeholder="Skriv på spanska…" autocomplete="off" spellcheck="false">
+      <div class="row">
+        <button class="btn btn-primary" id="submitBtn">Svara</button>
+        ${SETTINGS.maxHints === 0 ? '' : `<button class="btn btn-ghost" id="hintBtn"></button>`}
+      </div>
+    `;
+  } else if(kind === 'listen'){
+    const showText = difficulty !== 'hard';
+    bodyHtml = `
+      ${showText ? `<p class="q-swedish">${item.sv}</p>` : `<p class="q-swedish">Lyssna och skriv det spanska ordet</p>`}
+      <div class="row" style="margin-top:0;">
+        <button class="btn btn-primary" id="playBtn">🔊 Spela upp</button>
+        <span class="listen-count" id="listenCount"></span>
+      </div>
+      ${difficulty === 'easy'
+        ? `<div class="options" id="opts" style="margin-top:16px;"></div>`
+        : `<div class="hangman-display" id="hangman" style="margin-top:16px;"></div>
+           <input type="text" id="answerInput" placeholder="Skriv på spanska…" autocomplete="off" spellcheck="false">
+           <div class="row"><button class="btn btn-primary" id="submitBtn">Svara</button></div>`
+      }
+    `;
+  }
+
+  app.innerHTML = headerHtml + bodyHtml + `<div class="feedback" id="fb"></div>`;
+  bindCancel();
+  bindSkip(item);
+  attachTimer(item);
+
+  if(kind === 'click' || (kind === 'listen' && difficulty === 'easy')){
+    setupClickOptions(item);
+  }
+  if(kind === 'type' || (kind === 'listen' && (difficulty === 'medium' || difficulty === 'hard'))){
+    setupTypeInput(item, kind === 'type');
+  }
+  if(kind === 'listen'){
+    setupListenPlay(item);
+  }
+}
+
+function setupClickOptions(item){
+  const optsWrap = document.getElementById('opts');
+  const options = buildOptions(item.es);
+  options.forEach(opt => {
+    const b = document.createElement('button');
+    b.className = 'opt-btn';
+    b.textContent = opt;
+    b.onclick = () => {
+      if(state.answered) return;
+      const isCorrect = opt === item.es;
+      optsWrap.querySelectorAll('.opt-btn').forEach(btn => {
+        btn.classList.add('disabled');
+        if(btn.textContent === item.es) btn.classList.add('correct');
+        else if(btn === b) btn.classList.add('wrong');
+        else btn.classList.add('dim');
+      });
+      answerGiven(item, isCorrect);
+    };
+    optsWrap.appendChild(b);
+  });
+}
+
+function setupTypeInput(item, allowHints){
+  state.revealed = new Set();
+  state.hintsUsed = 0;
+  const hangmanEl = document.getElementById('hangman');
+  hangmanEl.innerHTML = displayHangman(item.es, state.revealed);
+  const input = document.getElementById('answerInput');
+  input.focus();
+  const hintBtn = document.getElementById('hintBtn');
+  const maxHints = SETTINGS.maxHints;
+
+  function hintLabel(){
+    return maxHints === null ? 'Ledtråd (obegränsat)' : `Ledtråd (${maxHints - state.hintsUsed} kvar)`;
+  }
+
+  if(hintBtn && allowHints){
+    hintBtn.textContent = hintLabel();
+    hintBtn.onclick = () => {
+      const idxs = item.es.split("").map((c,idx)=>idx)
+        .filter(idx => item.es[idx] !== " " && !/[¿?¡!]/.test(item.es[idx]) && !state.revealed.has(idx));
+      if(idxs.length === 0) return;
+      const pick = idxs[Math.floor(Math.random()*idxs.length)];
+      state.revealed.add(pick);
+      hangmanEl.innerHTML = displayHangman(item.es, state.revealed);
+      state.hintsUsed++;
+
+      const exhausted = maxHints !== null && state.hintsUsed >= maxHints;
+      if(exhausted){
+        hintBtn.disabled = true;
+        hintBtn.textContent = 'Inga fler ledtrådar';
+        return;
+      }
+      if(SETTINGS.hintCooldown > 0){
+        let remaining = SETTINGS.hintCooldown;
+        hintBtn.disabled = true;
+        hintBtn.textContent = `Ledtråd (${remaining}s)`;
+        state.cooldownInterval = setInterval(() => {
+          remaining--;
+          if(remaining <= 0){
+            clearInterval(state.cooldownInterval); state.cooldownInterval = null;
+            hintBtn.disabled = false;
+            hintBtn.textContent = hintLabel();
+          } else {
+            hintBtn.textContent = `Ledtråd (${remaining}s)`;
+          }
+        }, 1000);
+      } else {
+        hintBtn.textContent = hintLabel();
+      }
+    };
+  } else if(hintBtn){
+    hintBtn.style.display = 'none';
+  }
+
+  function submit(){
+    if(state.answered) return;
+    const val = input.value.trim();
+    if(val === "") return;
+    input.disabled = true;
+    document.getElementById('submitBtn').disabled = true;
+    if(hintBtn) hintBtn.disabled = true;
+    state.revealed = new Set(item.es.split("").map((c,idx)=>idx));
+    hangmanEl.innerHTML = displayHangman(item.es, state.revealed);
+    const isCorrect = normalizeAnswer(val) === normalizeAnswer(item.es);
+    answerGiven(item, isCorrect);
+  }
+
+  document.getElementById('submitBtn').onclick = submit;
+  input.addEventListener('keydown', e => { if(e.key === 'Enter') submit(); });
+}
+
+function setupListenPlay(item){
+  const playBtn = document.getElementById('playBtn');
+  const countEl = document.getElementById('listenCount');
+  let used = 0;
+  const limit = SETTINGS.listenLimit;
+  function updateLabel(){
+    countEl.textContent = limit === null ? 'Obegränsat antal lyssningar' : `${limit - used} lyssningar kvar`;
+    if(limit !== null && used >= limit) playBtn.disabled = true;
+  }
+  updateLabel();
+  playBtn.onclick = () => {
+    if(limit !== null && used >= limit) return;
+    speak(item.es);
+    used++;
+    updateLabel();
+  };
+}
+
+// ---------- Resultat ----------
+function renderResults(){
+  clearAnyTimers();
+  const correctCount = state.results.filter(r => r.correct).length;
+  const total = state.results.length;
+
+  const items = state.results.map(r => `
+    <li class="review-item ${r.correct ? 'right':'miss'}">
+      <div>
+        <div class="review-sv">${r.sv}</div>
+        <div class="review-es">${r.es}</div>
+      </div>
+      <span class="tag ${r.correct ? 'right':'miss'}">${r.skipped ? 'Hoppad' : (r.correct ? 'Rätt' : 'Fel')}</span>
+    </li>
+  `).join("");
+
+  app.innerHTML = `
+    <h2>Klart!</h2>
+    <div class="score-big">${correctCount} / ${total}</div>
+    <ul class="review-list">${items}</ul>
+    <div class="row">
+      <button class="btn btn-primary" id="retryBtn">Kör igen</button>
+      <button class="btn btn-ghost" id="statsBtn2">Statistik</button>
+      <button class="back-link" id="menuBtn">Till startmenyn</button>
+    </div>
+  `;
+  document.getElementById('retryBtn').onclick = () => startQuiz(state.mode, state.list, state.difficulty);
+  document.getElementById('statsBtn2').onclick = renderStats;
+  document.getElementById('menuBtn').onclick = renderMenu;
+}
+
+// ---------- Statistik ----------
+function renderStats(){
+  clearAnyTimers();
+  const entries = Object.entries(STATS).filter(([id,s]) => s.attempts > 0);
+  let totalAttempts = 0, totalCorrect = 0;
+  entries.forEach(([id,s]) => { totalAttempts += s.attempts; totalCorrect += s.correct; });
+  const pct = totalAttempts > 0 ? Math.round(totalCorrect/totalAttempts*100) : null;
+
+  const timedEntries = entries
+    .map(([id,s]) => ({id:Number(id), avg: s.timedAttempts>0 ? s.totalTimeMs/s.timedAttempts : null}))
+    .filter(e => e.avg !== null);
+  let insight = '';
+  if(timedEntries.length >= 3){
+    const fastest = timedEntries.reduce((a,b)=> a.avg < b.avg ? a : b);
+    const slowest = timedEntries.reduce((a,b)=> a.avg > b.avg ? a : b);
+    const fw = WORDS.find(w=>w.id===fastest.id), sw = WORDS.find(w=>w.id===slowest.id);
+    insight = `Snabbast svarar du på "${fw.sv}" (${(fastest.avg/1000).toFixed(1)}s i snitt) — långsammast på "${sw.sv}" (${(slowest.avg/1000).toFixed(1)}s i snitt).`;
+  }
+
+  const rows = entries
+    .map(([id,s]) => ({
+      id:Number(id), attempts:s.attempts, correct:s.correct, acc: s.correct/s.attempts,
+      avg: s.timedAttempts>0 ? s.totalTimeMs/s.timedAttempts : null
+    }))
+    .sort((a,b) => a.acc - b.acc)
+    .map(e => {
+      const w = WORDS.find(w=>w.id===e.id);
+      const p = Math.round(e.acc*100);
+      const cls = p < 50 ? 'low' : (p < 85 ? 'mid' : 'high');
+      const avgTxt = e.avg !== null ? ` • Ø ${(e.avg/1000).toFixed(1)}s` : '';
+      return `
+        <div class="stat-row">
+          <div>
+            <div class="sr-word">${w.sv} — ${w.es}</div>
+            <div class="sr-sub">${e.correct} av ${e.attempts} rätt${avgTxt}</div>
+          </div>
+          <div class="stat-pct ${cls}">${p}%</div>
+        </div>`;
+    }).join("");
+
+  app.innerHTML = `
+    <h2>Statistik</h2>
+    <p class="sub">Så här går det för dig hittills, ord för ord.</p>
+    ${totalAttempts > 0 ? `
+      <div class="stat-overview">
+        <div class="stat-sub">Du brukar ha rätt</div>
+        <div class="score-big">${pct}%</div>
+        <div class="stat-sub">${totalCorrect} rätt av ${totalAttempts} svar totalt</div>
+        ${insight ? `<div class="stat-insight">${insight}</div>` : ''}
+      </div>
+      <div class="stat-table">${rows}</div>
+    ` : `<p class="empty-note">Inga resultat än — kör en quiz först så dyker statistiken upp här.</p>`}
+    <div class="row">
+      <button class="btn btn-danger btn-small" id="resetBtn">Rensa all statistik</button>
+      <button class="back-link" id="menuBtn">Till startmenyn</button>
+    </div>
+  `;
+  document.getElementById('menuBtn').onclick = renderMenu;
+  document.getElementById('resetBtn').onclick = () => {
+    showConfirm('Är du säker på att du vill rensa all sparad statistik? Det går inte att ångra.', async () => {
+      STATS = {};
+      await saveStats();
+      renderStats();
+    });
+  };
+}
+
+// ---------- Inställningar ----------
+function buildRadioGroup(container, options, currentVal, onSelect){
+  container.innerHTML = '';
+  options.forEach(opt => {
+    const el = document.createElement('label');
+    el.className = 'radio-opt' + (currentVal === opt.v ? ' active' : '');
+    el.innerHTML = `<input type="radio">${opt.label}`;
+    el.onclick = () => {
+      onSelect(opt.v);
+      container.querySelectorAll('.radio-opt').forEach(n => n.classList.remove('active'));
+      el.classList.add('active');
+    };
+    container.appendChild(el);
+  });
+}
+
+function renderSettings(){
+  clearAnyTimers();
+  app.innerHTML = `
+    <h2>Inställningar</h2>
+    <p class="sub">Allt sparas automatiskt i webbläsaren.</p>
+
+    <h3>Ledtrådar i Skriv-quiz</h3>
+    <div class="setting-group">
+      <div class="setting-label">Cooldown mellan ledtrådar</div>
+      <div class="setting-desc">Hur länge du måste vänta mellan varje ledtråd.</div>
+      <div class="radio-grid" id="cooldownGrid"></div>
+    </div>
+    <div class="setting-group">
+      <div class="setting-label">Antal ledtrådar per fråga</div>
+      <div class="setting-desc">Hur många ledtrådar du max får ta per fråga.</div>
+      <div class="radio-grid" id="maxhintGrid"></div>
+    </div>
+
+    <h3>Lyssna-quiz</h3>
+    <div class="setting-group">
+      <div class="setting-label">Antal lyssningar per fråga</div>
+      <div class="setting-desc">Hur många gånger du får trycka på play innan du måste svara på det du hört.</div>
+      <div class="radio-grid" id="listenGrid"></div>
+    </div>
+    <div class="setting-group">
+      <div class="setting-label">Uppläsningshastighet</div>
+      <div class="setting-desc">Hur snabbt ordet läses upp.</div>
+      <div class="radio-grid" id="rateGrid"></div>
+    </div>
+
+    <h3>Rättning</h3>
+    <div class="setting-group">
+      <div class="setting-label">Kräv rätta accenter (é, ñ, á …)</div>
+      <div class="setting-desc">Om PÅ måste du skriva accenterna korrekt för att få rätt.</div>
+      <div class="radio-grid" id="strictGrid"></div>
+    </div>
+
+    <h3>Rundor</h3>
+    <div class="setting-group">
+      <div class="setting-label">Antal frågor per runda</div>
+      <div class="setting-desc">Gäller för "Normal"-läget.</div>
+      <div class="radio-grid" id="qprGrid"></div>
+    </div>
+    <div class="setting-group">
+      <div class="setting-label">Repetera fel svarade ord</div>
+      <div class="setting-desc">Om PÅ dyker ord du svarat fel på upp igen i slutet av samma runda.</div>
+      <div class="radio-grid" id="requeueGrid"></div>
+    </div>
+    <div class="setting-group">
+      <div class="setting-label">Tidsgräns per fråga</div>
+      <div class="setting-desc">Bra för att öva inför ett tidsbegränsat prov.</div>
+      <div class="radio-grid" id="timeGrid"></div>
+    </div>
+
+    <h3>Under quizet</h3>
+    <div class="setting-group">
+      <div class="setting-label">Visa tips om dina svåra ord</div>
+      <div class="setting-desc">Visar en liten rad under frågan om ord du brukar missa.</div>
+      <div class="radio-grid" id="struggleGrid"></div>
+    </div>
+    <div class="setting-group">
+      <div class="setting-label">Ljudfeedback vid rätt/fel</div>
+      <div class="setting-desc">Ett kort pip vid rätt respektive fel svar.</div>
+      <div class="radio-grid" id="soundGrid"></div>
+    </div>
+    <div class="setting-group">
+      <div class="setting-label">Kom ihåg senaste läget</div>
+      <div class="setting-desc">Visar en genväg på startsidan till det quiz du körde senast.</div>
+      <div class="radio-grid" id="rememberGrid"></div>
+    </div>
+
+    <h3>Data</h3>
+    <div class="setting-group">
+      <div class="setting-label">Rensa all sparad statistik</div>
+      <div class="setting-desc">Nollställer resultaten för alla ord. Går inte att ångra.</div>
+      <button class="btn btn-danger btn-small" id="resetStatsBtn">Rensa statistik</button>
+    </div>
+
+    <div class="row"><button class="back-link" id="menuBtn">Till startmenyn</button></div>
+  `;
+
+  buildRadioGroup(document.getElementById('cooldownGrid'),
+    [{v:0,label:'Ingen'},{v:5,label:'5 sek'},{v:10,label:'10 sek'},{v:15,label:'15 sek'},{v:30,label:'30 sek'},{v:60,label:'60 sek'}],
+    SETTINGS.hintCooldown, v => { SETTINGS.hintCooldown = v; saveSettings(); });
+
+  buildRadioGroup(document.getElementById('maxhintGrid'),
+    [{v:'unlimited',label:'Oändligt'},{v:1,label:'1'},{v:3,label:'3'},{v:5,label:'5'},{v:10,label:'10'},{v:15,label:'15'},{v:20,label:'20'},{v:30,label:'30'},{v:'none',label:'Inga'}],
+    SETTINGS.maxHints === null ? 'unlimited' : (SETTINGS.maxHints === 0 ? 'none' : SETTINGS.maxHints),
+    v => { SETTINGS.maxHints = v === 'unlimited' ? null : (v === 'none' ? 0 : v); saveSettings(); });
+
+  buildRadioGroup(document.getElementById('listenGrid'),
+    [{v:1,label:'1'},{v:3,label:'3'},{v:5,label:'5'},{v:10,label:'10'},{v:15,label:'15'},{v:'unlimited',label:'Oändligt'}],
+    SETTINGS.listenLimit === null ? 'unlimited' : SETTINGS.listenLimit,
+    v => { SETTINGS.listenLimit = v === 'unlimited' ? null : v; saveSettings(); });
+
+  buildRadioGroup(document.getElementById('rateGrid'),
+    [{v:'slow',label:'Långsam'},{v:'normal',label:'Normal'},{v:'fast',label:'Snabb'}],
+    SETTINGS.voiceRate, v => { SETTINGS.voiceRate = v; saveSettings(); });
+
+  buildRadioGroup(document.getElementById('strictGrid'),
+    [{v:false,label:'Av'},{v:true,label:'På'}],
+    SETTINGS.strictAccents, v => { SETTINGS.strictAccents = v; saveSettings(); });
+
+  buildRadioGroup(document.getElementById('qprGrid'),
+    [{v:'all',label:'Alla (15)'},{v:5,label:'5 slumpade'},{v:10,label:'10 slumpade'}],
+    SETTINGS.questionsPerRound, v => { SETTINGS.questionsPerRound = v; saveSettings(); });
+
+  buildRadioGroup(document.getElementById('requeueGrid'),
+    [{v:false,label:'Av'},{v:true,label:'På'}],
+    SETTINGS.requeueWrong, v => { SETTINGS.requeueWrong = v; saveSettings(); });
+
+  buildRadioGroup(document.getElementById('timeGrid'),
+    [{v:0,label:'Ingen'},{v:15,label:'15 sek'},{v:30,label:'30 sek'},{v:60,label:'60 sek'}],
+    SETTINGS.timeLimit, v => { SETTINGS.timeLimit = v; saveSettings(); });
+
+  buildRadioGroup(document.getElementById('struggleGrid'),
+    [{v:true,label:'På'},{v:false,label:'Av'}],
+    SETTINGS.showStruggleTip, v => { SETTINGS.showStruggleTip = v; saveSettings(); });
+
+  buildRadioGroup(document.getElementById('soundGrid'),
+    [{v:true,label:'På'},{v:false,label:'Av'}],
+    SETTINGS.soundFeedback, v => { SETTINGS.soundFeedback = v; saveSettings(); });
+
+  buildRadioGroup(document.getElementById('rememberGrid'),
+    [{v:false,label:'Av'},{v:true,label:'På'}],
+    SETTINGS.rememberLastMode, v => { SETTINGS.rememberLastMode = v; saveSettings(); });
+
+  document.getElementById('menuBtn').onclick = renderMenu;
+  document.getElementById('resetStatsBtn').onclick = () => {
+    showConfirm('Är du säker på att du vill rensa all sparad statistik? Det går inte att ångra.', async () => {
+      STATS = {};
+      await saveStats();
+      renderSettings();
+    });
+  };
+}
+
+// ---------- Init ----------
+async function init(){
+  STATS = await loadStats();
+  SETTINGS = await loadSettings();
+  renderMenu();
+}
+init();
+</script>
+</body>
+</html>
